@@ -1,3 +1,4 @@
+// require mongoose of course
 const mongoose = require("mongoose");
 
 // this is a optional short cut
@@ -8,5 +9,10 @@ const movieSchema = new Schema({
   releaseYear: Number,
   mpaaRating: String,
   cast: [String], // this is an array of strings
-  nowShowing: Boolean,
+  nowShowing: Boolean
 });
+
+// compile thi schema into a model and export
+module.export = mongoose.model("Movie", movieSchema);
+
+

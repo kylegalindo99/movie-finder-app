@@ -8,7 +8,6 @@ mongoose.connect('mongodb://localhost/movies', {
 })
 
 
-//short connection to to mongoose connection object
 const db = mongoose.connection
 
 db.on('connected', function() {
